@@ -119,6 +119,9 @@ movies = [
             title: "Betty White"
         }
     ]
+
+
+    
     // ,
     // [
     //     {
@@ -849,18 +852,24 @@ movies = [
 document.querySelector(".start").addEventListener('click', function() {
     // evt.preventDefault()
     // document.querySelectorAll("section .grid-container").style.visibility = "visible";
-    let answerGroup = (Math.floor(Math.random()*6))
+    let answerGroup = (Math.floor(Math.random() * movies.length))
+    console.log(movies.length)
+    console.log(answerGroup)
+    // movies.splice(answerGroup, 1)
+    console.log(movies)
     for (i = 0; i < 6; i++) {
         document.querySelectorAll("h3")[i].innerHTML = movies[answerGroup][i].title
     }
+    movies.splice(answerGroup, 1)
 })
 
 
-
-console.log(movies[0][0].title)
-console.log(document.querySelectorAll("h3")[3].innerHTML)
-console.log(movies[(Math.floor(Math.random() * 6))])
-
+// console.log(movies[0][0].title)
+// console.log(document.querySelectorAll("h3")[3].innerHTML)
+// console.log(movies[(Math.floor(Math.random() * 6))])
+// array = [1,2,3,4,5]
+// array.splice(2,1)
+// console.log(array)
 
 
 
