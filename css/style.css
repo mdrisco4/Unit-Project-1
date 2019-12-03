@@ -6,10 +6,13 @@ h1 {
     grid-template-columns: 240px 240px 240px;
     grid-template-rows: 320px 320px;
     justify-content: center;
+    /* visibility: hidden; */
 }
 .grid-item {
     border: 1px solid black;
     margin: 25px;
+    /* display: ; */
+    /* visibility: hidden; */
 }
 .button-container {
     text-align: center;
