@@ -3,10 +3,19 @@ h1 {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 400px 400px;
+    grid-template-columns: 240px 240px 240px;
+    grid-template-rows: 320px 320px;
     justify-content: center;
 }
 .grid-item {
     border: 1px solid black;
+    margin: 25px;
+}
+.button-container {
+    text-align: center;
+    padding: 30px;
+}
+.start, .reset {
+    height: 40px;
+    width: 75px;
 }
