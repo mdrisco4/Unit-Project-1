@@ -35,18 +35,18 @@
                 
                 
                 
-var nums = [1,2,3,4,5,6],
-    ranNums = [],
-    i = nums.length,
-    j = 0;
+// var nums = [1,2,3,4,5,6],
+//     ranNums = [],
+//     i = nums.length,
+//     j = 0;
                 
-while (i--) {
-    j = Math.floor(Math.random() * (i+1));
-    ranNums.push(nums[j]);
-    nums.splice(j,1);
-}
+// while (i--) {
+//     j = Math.floor(Math.random() * (i+1));
+//     ranNums.push(nums[j]);
+//     nums.splice(j,1);
+// }
                 
-console.log(ranNums)
+// console.log(ranNums)
 
 
 
@@ -230,7 +230,7 @@ movies = [
             answer: "incorrect"
         },
         {
-            question: "What Lord of the Rings character was tasked with destroying the ring?"
+            question: "What Lord of the Rings character was tasked with destroying the one ring?"
         }
     ],
     [
@@ -995,52 +995,171 @@ books = [
         ]
         ]
 
-var clickCount;
-clickCount = 0;
+// var clickCount;
+// clickCount = 0;
 
-document.querySelector(".movies").addEventListener('click', function() {
-document.querySelector(".movies").style.visibility = "hidden";
-document.querySelector(".tv").style.visibility = "hidden";
-document.querySelector(".books").style.visibility = "hidden"
+// document.querySelector(".movies").addEventListener('click', function() {
+// document.querySelector(".movies").style.visibility = "hidden";
+// document.querySelector(".tv").style.visibility = "hidden";
+// document.querySelector(".books").style.visibility = "hidden"
 
-        document.querySelectorAll("h3")[0].innerHTML = movies[clickCount][0].title
-        document.querySelectorAll(".pics")[0].setAttribute('src', movies[clickCount][0].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// for(let i = 0; i < 6; i++)
+//         document.querySelectorAll("h3")[i].innerHTML = movies[clickCount][i].title
+//         document.querySelectorAll(".pics")[i].setAttribute('src', movies[clickCount][i].image)
+//         document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelectorAll("h3")[1].innerHTML = movies[clickCount][1].title
-        document.querySelectorAll(".pics")[1].setAttribute('src', movies[clickCount][1].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+      
+      
+      
+        // document.querySelectorAll("h3")[0].innerHTML = movies[clickCount][0].title
+        // document.querySelectorAll(".pics")[0].setAttribute('src', movies[clickCount][0].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelectorAll("h3")[2].innerHTML = movies[clickCount][2].title
-        document.querySelectorAll(".pics")[2].setAttribute('src', movies[clickCount][2].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+        // document.querySelectorAll("h3")[1].innerHTML = movies[clickCount][1].title
+        // document.querySelectorAll(".pics")[1].setAttribute('src', movies[clickCount][1].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelectorAll("h3")[3].innerHTML = movies[clickCount][3].title
-        document.querySelectorAll(".pics")[3].setAttribute('src', movies[clickCount][3].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+        // document.querySelectorAll("h3")[2].innerHTML = movies[clickCount][2].title
+        // document.querySelectorAll(".pics")[2].setAttribute('src', movies[clickCount][2].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelectorAll("h3")[4].innerHTML = movies[clickCount][4].title
-        document.querySelectorAll(".pics")[4].setAttribute('src', movies[clickCount][4].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+        // document.querySelectorAll("h3")[3].innerHTML = movies[clickCount][3].title
+        // document.querySelectorAll(".pics")[3].setAttribute('src', movies[clickCount][3].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelectorAll("h3")[5].innerHTML = movies[clickCount][5].title
-        document.querySelectorAll(".pics")[5].setAttribute('src', movies[clickCount][5].image)
-        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+        // document.querySelectorAll("h3")[4].innerHTML = movies[clickCount][4].title
+        // document.querySelectorAll(".pics")[4].setAttribute('src', movies[clickCount][4].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        document.querySelector(".grid-item").addEventListener('click', function (evt) {
-            for(var i = 0; i < movies.length; i++){
-                if(movies[i].answer == "correct"){
-                  console.log("correct");
-                }
-                else {
-                    console.log("incorrect");
-                }
-              }
-        })
+        // document.querySelectorAll("h3")[5].innerHTML = movies[clickCount][5].title
+        // document.querySelectorAll(".pics")[5].setAttribute('src', movies[clickCount][5].image)
+        // document.querySelector("h2").innerHTML = movies[clickCount][6].question
 
-        clickCount++
-        console.log(clickCount)
-})
+      
+// document.querySelector(".card1").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         if(clickCount == 1 || clickCount == 3 || clickCount == 5 || clickCount == 6){
+//             console.log("correct");
+//         }
+//         else {
+//             console.log("incorrect");
+//         }
+//     })
+//         clickCount++
+//         console.log(clickCount)
+
+// document.querySelector(".card2").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         // if(clickCount == 1){
+//         //     console.log("correct");
+//         // }
+//         // else {
+//             console.log("incorrect");
+//     //     }
+//     // })
+//         clickCount++
+//         console.log(clickCount)
+
+// document.querySelector(".card1").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         if(clickCount == 4){
+//             console.log("correct");
+//         }
+//         else {
+//             console.log("incorrect");
+//         }
+//     })
+//         clickCount++
+//         console.log(clickCount)
+
+// document.querySelector(".card1").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         // if(clickCount == 0 || clickCount == 2 || clickCount == 4 || clickCount == 5){
+//         //     console.log("correct");
+//         // }
+//         // else {
+//             console.log("incorrect");
+//     //     }
+//     // })
+//         clickCount++
+//         console.log(clickCount)
+
+// document.querySelector(".card1").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         // if(clickCount == 0 || clickCount == 2 || clickCount == 4 || clickCount == 5){
+//         //     console.log("correct");
+//         // }
+//         // else {
+//             console.log("incorrect");
+//     //     }
+//     // })
+//         clickCount++
+//         console.log(clickCount)
+
+// document.querySelector(".card1").addEventListener('click', function (evt) {
+//     // for(var i = 0; i < movies.length; i++){
+//         if(clickCount == 3) {
+//             console.log("correct");
+//         }
+//         else {
+//             console.log("incorrect");
+//         }
+//     })
+//         clickCount++
+//         console.log(clickCount)
+// })
+// })    
+// })
+// })
+      
+      
+      
+      
+      
+      
+      
+//         document.querySelectorAll(".grid-item")[0].addEventListener('click', function (evt) {
+//             // for(var i = 0; i < movies.length; i++){
+//                 if(movies[0][0].answer == "correct"){
+//                     console.log("correct");
+//                 }
+//                 else {
+//                     console.log("incorrect");
+//                 }
+//               }
+//         )
+
+//         clickCount++
+//         console.log(clickCount)
+// })
+
+
+// console.log(movies[0][0].answer)
+
+
+// document.querySelectorAll(".grid-item").forEach(function(elem) {
+
+//     document.querySelectorAll(elem).addEventListener('click', function () {
+//         if(movies.answer == "correct"){
+//             console.log("correct");
+//         }
+//         else {
+//             console.log("incorrect");
+//         }
+//       })
+// })
+
+// clickCount++
+// console.log(clickCount)
+// })
+
+
+
+
+
+
+
+
 // document.querySelector(".card1").addEventListener('click', function {
 //     document.querySelectorAll("h3")[0].innerHTML = movies[clickCount][0].title
 //     document.querySelectorAll(".pics")[0].setAttribute('src', movies[clickCount][0].image)
@@ -1077,16 +1196,16 @@ document.querySelector(".books").style.visibility = "hidden"
 
 
 
-document.querySelector(".tv").addEventListener('click', function() {
-    document.querySelector(".movies").style.visibility = "hidden";
-    document.querySelector(".tv").style.visibility = "hidden";
-    document.querySelector(".books").style.visibility = "hidden"
-})
-document.querySelector(".books").addEventListener('click', function() {
-    document.querySelector(".movies").style.visibility = "hidden";
-    document.querySelector(".tv").style.visibility = "hidden";
-    document.querySelector(".books").style.visibility = "hidden"
-})
+// document.querySelector(".tv").addEventListener('click', function() {
+//     document.querySelector(".movies").style.visibility = "hidden";
+//     document.querySelector(".tv").style.visibility = "hidden";
+//     document.querySelector(".books").style.visibility = "hidden"
+// })
+// document.querySelector(".books").addEventListener('click', function() {
+//     document.querySelector(".movies").style.visibility = "hidden";
+//     document.querySelector(".tv").style.visibility = "hidden";
+//     document.querySelector(".books").style.visibility = "hidden"
+// })
 
 
 document.querySelector(".next").addEventListener('click', function() {
@@ -1103,6 +1222,26 @@ document.querySelector(".next").addEventListener('click', function() {
     movies.splice(answerGroup, 1)
     const indexNum = answerGroup
 })
+
+movie = {
+    question1:{
+        qestion: "",
+        answers:{
+            answer1: {
+                imgUrl: "./img/image1",
+                isCorrect: true
+        },
+            answer2: {
+                imgUrl: "./img/image1",
+                isCorrect: false
+        }
+            "./img/image2",
+
+        }
+        correctAnswer: 
+
+    }
+}
 
 // console.log(document.querySelectorAll(".pics")[0])
 
