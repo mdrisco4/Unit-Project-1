@@ -181,7 +181,7 @@ const movies = [
         correctAnswer: "Frodo"
     },
     {
-        question: "Who was the youngest thespian to win an Oscar?",
+        question: "Who has won the most Oscars in history?",
         choices: [
             {
                 text: "Katherine Hepburn",
@@ -215,6 +215,42 @@ const movies = [
             }
         ],
         correctAnswer: "Katherine Hepburn"
+    },
+    {
+        question: "GAME OVER, PLAY AGAIN?",
+        choices: [
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Great job!",
+                image: "images/placeholderImage.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Katherine Hepburn"
     }
 ]
 
@@ -235,6 +271,7 @@ function renderQuestion () {
         document.querySelectorAll(".pics")[i].setAttribute('src', movies[roundCounter].choices[i].image);
         document.querySelector("h2").innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
+            document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
                 console.log(movies[roundCounter].choices[0].isCorrect)
                 console.log(movies[roundCounter].choices[1].isCorrect)
