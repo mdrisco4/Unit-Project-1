@@ -995,11 +995,88 @@ books = [
         ]
         ]
 
+var clickCount;
+clickCount = 0;
+
 document.querySelector(".movies").addEventListener('click', function() {
-    document.querySelector(".movies").style.visibility = "hidden";
-    document.querySelector(".tv").style.visibility = "hidden";
-    document.querySelector(".books").style.visibility = "hidden"
+document.querySelector(".movies").style.visibility = "hidden";
+document.querySelector(".tv").style.visibility = "hidden";
+document.querySelector(".books").style.visibility = "hidden"
+
+        document.querySelectorAll("h3")[0].innerHTML = movies[clickCount][0].title
+        document.querySelectorAll(".pics")[0].setAttribute('src', movies[clickCount][0].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelectorAll("h3")[1].innerHTML = movies[clickCount][1].title
+        document.querySelectorAll(".pics")[1].setAttribute('src', movies[clickCount][1].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelectorAll("h3")[2].innerHTML = movies[clickCount][2].title
+        document.querySelectorAll(".pics")[2].setAttribute('src', movies[clickCount][2].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelectorAll("h3")[3].innerHTML = movies[clickCount][3].title
+        document.querySelectorAll(".pics")[3].setAttribute('src', movies[clickCount][3].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelectorAll("h3")[4].innerHTML = movies[clickCount][4].title
+        document.querySelectorAll(".pics")[4].setAttribute('src', movies[clickCount][4].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelectorAll("h3")[5].innerHTML = movies[clickCount][5].title
+        document.querySelectorAll(".pics")[5].setAttribute('src', movies[clickCount][5].image)
+        document.querySelector("h2").innerHTML = movies[clickCount][6].question
+
+        document.querySelector(".grid-item").addEventListener('click', function (evt) {
+            for(var i = 0; i < movies.length; i++){
+                if(movies[i].answer == "correct"){
+                  console.log("correct");
+                }
+                else {
+                    console.log("incorrect");
+                }
+              }
+        })
+
+        clickCount++
+        console.log(clickCount)
 })
+// document.querySelector(".card1").addEventListener('click', function {
+//     document.querySelectorAll("h3")[0].innerHTML = movies[clickCount][0].title
+//     document.querySelectorAll(".pics")[0].setAttribute('src', movies[clickCount][0].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// document.querySelector(".card2").addEventListener('click', function {
+//     document.querySelectorAll("h3")[1].innerHTML = movies[clickCount][1].title
+//     document.querySelectorAll(".pics")[1].setAttribute('src', movies[clickCount][1].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// document.querySelector(".card3").addEventListener('click', function {
+//     document.querySelectorAll("h3")[2].innerHTML = movies[clickCount][2].title
+//     document.querySelectorAll(".pics")[2].setAttribute('src', movies[clickCount][2].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// document.querySelector(".card4").addEventListener('click', function {
+//     document.querySelectorAll("h3")[3].innerHTML = movies[clickCount][3].title
+//     document.querySelectorAll(".pics")[3].setAttribute('src', movies[clickCount][3].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// document.querySelector(".card5").addEventListener('click', function {
+//     document.querySelectorAll("h3")[4].innerHTML = movies[clickCount][4].title
+//     document.querySelectorAll(".pics")[4].setAttribute('src', movies[clickCount][4].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// document.querySelector(".card6").addEventListener('click', function {
+//     document.querySelectorAll("h3")[5].innerHTML = movies[clickCount][5].title
+//     document.querySelectorAll(".pics")[5].setAttribute('src', movies[clickCount][5].image)
+//     document.querySelector("h2").innerHTML = movies[clickCount][6].question
+// })
+// })
+
+
+
+
+
 document.querySelector(".tv").addEventListener('click', function() {
     document.querySelector(".movies").style.visibility = "hidden";
     document.querySelector(".tv").style.visibility = "hidden";
@@ -1010,8 +1087,6 @@ document.querySelector(".books").addEventListener('click', function() {
     document.querySelector(".tv").style.visibility = "hidden";
     document.querySelector(".books").style.visibility = "hidden"
 })
-
-
 
 
 document.querySelector(".next").addEventListener('click', function() {
@@ -1029,7 +1104,7 @@ document.querySelector(".next").addEventListener('click', function() {
     const indexNum = answerGroup
 })
 
-console.log(document.querySelectorAll(".pics")[0])
+// console.log(document.querySelectorAll(".pics")[0])
 
 
 // document.querySelector(".next").addEventListener('click', function() {
