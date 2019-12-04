@@ -4,9 +4,11 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 80px;
+    font-size: 140px;
     color: lime;
     font-family: 'Chela One', cursive;
+    padding: 0;
+    margin: 0;
 }
 h2 {
     text-align: center;

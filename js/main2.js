@@ -131,7 +131,7 @@ movie = {
                 image: "images/returnOfTheKing.jpeg",
                 isCorrect: false
         },
-            answer5: {
+            {
                 text: "Titanic",
                 image: "images/titanic.jpeg",
                 isCorrect: false
@@ -162,7 +162,7 @@ movie = {
                 image: "images/legolas.jpeg",
                 isCorrect: false
         },
-            answer4: {
+            {
                 text: "Bilbo",
                 image: "images/bilbo.jpeg",
                 isCorrect: false
@@ -234,6 +234,44 @@ movie = {
 
 
 
+// document.querySelector(".next").addEventListener('click', function() {
+//     for (let i = 0; i < 6; i++) {
+//         document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
+//         document.querySelectorAll(".pics")[i].setAttribute('src', movie.question1.choices[i].image);
+//         document.querySelector("h2").innerHTML = movie.question1.question;
+//         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//             if(movie.question1.choices[i].isCorrect == true) {
+//                 alert("correct")
+//             } else {
+//                 alert("incorrect")
+//             }
+//         })
+//     }
+// })
+
+
+// function next(newQuestion) {
+//     document.querySelector(".next").addEventListener('click', function(newQuestion) {
+//     for (let i = 0; i < 6; i++) {
+//         document.querySelectorAll("h3")[i].innerHTML = movie.newQuestion.choices[i].text;
+//         document.querySelectorAll(".pics")[i].setAttribute('src', movie.newQuestion.choices[i].image);
+//         document.querySelector("h2").innerHTML = movie.newQuestion.question;
+//         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//             if(movie.newQuestion.choices[i].isCorrect == true) {
+//                 alert("correct");
+//                 newQuestion = question2;
+//                     next(question2)
+//             } else {
+//                 alert("incorrect");
+//                 newQuestion = question2;
+//                 next(question2)
+//             }
+//         })
+//     }
+// })
+// }
 document.querySelector(".next").addEventListener('click', function() {
     for (let i = 0; i < 6; i++) {
         document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
@@ -243,8 +281,40 @@ document.querySelector(".next").addEventListener('click', function() {
         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
             if(movie.question1.choices[i].isCorrect == true) {
                 alert("correct")
+                document.querySelector(".next").addEventListener('click', function() {
+                    for (let i = 0; i < 6; i++) {
+                        document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
+                        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
+                        document.querySelector("h2").innerHTML = movie.question2.question;
+                        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+                        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+                            if(movie.question2.choices[i].isCorrect == true) {
+                                alert("correct")
+                            } else {
+                                alert("incorrect")
+                            }
+                        })
+                    }
+                })
+                
             } else {
                 alert("incorrect")
+                document.querySelector(".next").addEventListener('click', function() {
+                    for (let i = 0; i < 6; i++) {
+                        document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
+                        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
+                        document.querySelector("h2").innerHTML = movie.question2.question;
+                        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+                        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+                            if(movie.question2.choices[i].isCorrect == true) {
+                                alert("correct")
+                            } else {
+                                alert("incorrect")
+                            }
+                        })
+                    }
+                })
+                
             }
         })
     }
