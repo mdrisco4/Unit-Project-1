@@ -254,9 +254,9 @@ const movies = [
     }
 ]
 
-console.log(movies[0].question)
-console.log(movies[0].choices)
-console.log(movies[0].correctAnswer)
+// console.log(movies[0].question)
+// console.log(movies[0].choices)
+// console.log(movies[0].correctAnswer)
 
 
 let roundCounter = 0
@@ -271,23 +271,22 @@ function renderQuestion () {
         document.querySelectorAll(".pics")[i].setAttribute('src', movies[roundCounter].choices[i].image);
         document.querySelector("h2").innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
-            document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                console.log(movies[roundCounter].choices[0].isCorrect)
-                console.log(movies[roundCounter].choices[1].isCorrect)
-                console.log(movies[roundCounter].choices[2].isCorrect)
-                console.log(movies[roundCounter].choices[3].isCorrect)
-                console.log(movies[roundCounter].choices[4].isCorrect)
-                console.log(movies[roundCounter].choices[5].isCorrect)
+                // console.log(movies[roundCounter].choices[0].isCorrect)
+                // console.log(movies[roundCounter].choices[1].isCorrect)
+                // console.log(movies[roundCounter].choices[2].isCorrect)
+                // console.log(movies[roundCounter].choices[3].isCorrect)
+                // console.log(movies[roundCounter].choices[4].isCorrect)
+                // console.log(movies[roundCounter].choices[5].isCorrect)
                 alert("correct");
             } else {
+                // console.log(movies[roundCounter].choices[0].isCorrect)
+                // console.log(movies[roundCounter].choices[1].isCorrect)
+                // console.log(movies[roundCounter].choices[2].isCorrect)
+                // console.log(movies[roundCounter].choices[3].isCorrect)
+                // console.log(movies[roundCounter].choices[4].isCorrect)
+                // console.log(movies[roundCounter].choices[5].isCorrect)
                 alert("incorrect");
-                console.log(movies[roundCounter].choices[0].isCorrect)
-                console.log(movies[roundCounter].choices[1].isCorrect)
-                console.log(movies[roundCounter].choices[2].isCorrect)
-                console.log(movies[roundCounter].choices[3].isCorrect)
-                console.log(movies[roundCounter].choices[4].isCorrect)
-                console.log(movies[roundCounter].choices[5].isCorrect)
             }
         })
     }
@@ -313,6 +312,6 @@ var btn = document.createElement('button')
 /** Quick List
  * 1. renderQuestion will update the DOM with the question and choices data
  *  of the current question, determined by the  roundCounter variable
- * 2. add event listenes to each of the gridItems
+ * 2. add event listeners to each of the gridItems
  *    it will check the isCorrect property of the choice that corresponds with its index
  */
