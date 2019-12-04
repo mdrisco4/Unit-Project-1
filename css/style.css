@@ -21,6 +21,9 @@ h2 {
 h3 {
     text-align: center;
 }
+h6 {
+    display: none;
+}
 .button-container-top {
     text-align: center;
     padding: 30px;
