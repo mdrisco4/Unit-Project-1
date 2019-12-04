@@ -17,6 +17,9 @@ movies = [
         },
         {
             title: "The Spy who Loved Me"
+        },
+        {
+            question: "What was the first James Bond film?"
         }
     ],
     [
@@ -37,6 +40,9 @@ movies = [
         },
         {
             title: "X-Men: First Class"
+        },
+        {
+            question: "What X-Men movie was based in the 1960s?"
         }
     ],
     [
@@ -57,6 +63,9 @@ movies = [
         },
         {
             title: "1975"
+        },
+        {
+            question: "What year was the first Star Wars film released?"
         }
     ],
     [
@@ -77,6 +86,9 @@ movies = [
         },
         {
             title: "Casino"
+        },
+        {
+            question: "What oscar winning movie was directed by Kevin Costner?"
         }
     ],
     [
@@ -97,6 +109,9 @@ movies = [
         },
         {
             title: "Aragorn"
+        },
+        {
+            question: "What Lord of the Rings character was tasked with destroying the ring?"
         }
     ],
     [
@@ -117,11 +132,11 @@ movies = [
         },
         {
             title: "Betty White"
+        },
+        {
+            question: "Who was the youngest thespian to win an Oscar?"
         }
     ]
-
-
-    
     // ,
     // [
     //     {
@@ -284,7 +299,7 @@ movies = [
     //     }
     // ]
         ]
-    tv = [
+tv = [
         [
             {
         
@@ -566,7 +581,7 @@ movies = [
             }
         ]
         ]
-    books = [
+books = [
         [
             {
         
@@ -849,19 +864,49 @@ movies = [
         ]
         ]
 
-document.querySelector(".start").addEventListener('click', function() {
-    // evt.preventDefault()
-    // document.querySelectorAll("section .grid-container").style.visibility = "visible";
+// document.querySelector(".start").addEventListener('click', function() {
+//     document.querySelector(".grid-container").style.visibility = "visible";
+// })
+
+
+
+
+
+document.querySelector(".next").addEventListener('click', function() {
     let answerGroup = (Math.floor(Math.random() * movies.length))
-    console.log(movies.length)
-    console.log(answerGroup)
+    // console.log(movies.length)
+    // console.log(answerGroup)
     // movies.splice(answerGroup, 1)
-    console.log(movies)
-    for (i = 0; i < 6; i++) {
+    // console.log(movies)
+    for (let i = 0; i < 6; i++) {
         document.querySelectorAll("h3")[i].innerHTML = movies[answerGroup][i].title
+        console.log(document.querySelector("h2").innerHTML = movies[answerGroup][6].question)
     }
     movies.splice(answerGroup, 1)
 })
+
+
+// document.querySelector(".card1").addEventListener('click', function {
+
+// })
+// document.querySelector(".card2").addEventListener('click', function {
+    
+// })
+// document.querySelector(".card3").addEventListener('click', function {
+    
+// })
+// document.querySelector(".card4").addEventListener('click', function {
+    
+// })
+// document.querySelector(".card5").addEventListener('click', function {
+    
+// })
+// document.querySelector(".card6").addEventListener('click', function {
+    
+// })
+
+
+
 
 
 // console.log(movies[0][0].title)
@@ -870,874 +915,3 @@ document.querySelector(".start").addEventListener('click', function() {
 // array = [1,2,3,4,5]
 // array.splice(2,1)
 // console.log(array)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// movies = [
-// [
-//     {
-//         title: "Dr. No"
-//     },
-//     {
-//         title: "Casino Royale"
-//     },
-//     {
-//         title: "For Your Eyes Only"
-//     },
-//     {
-//         title: "Thunderball"
-//     },
-//     {
-//         title: "Diamonds are Forever"
-//     },
-//     {
-//         title: "The Spy who Loved Me"
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ],
-// [
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     },
-//     {
-
-//     }
-// ]
-//     ]
-// tv = [
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ]
-//     ]
-// books = [
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ],
-//     [
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         },
-//         {
-    
-//         }
-//     ]
-//     ]
-
