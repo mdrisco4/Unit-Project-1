@@ -231,24 +231,163 @@ movie = {
 // console.log(movie.question1.choices[0].isCorrect)
 // console.log(movie.question1)
 
-
-
-
-// document.querySelector(".next").addEventListener('click', function() {
-//     for (let i = 0; i < 6; i++) {
-//         document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
-//         document.querySelectorAll(".pics")[i].setAttribute('src', movie.question1.choices[i].image);
-//         document.querySelector("h2").innerHTML = movie.question1.question;
-//         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
-//         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
-//             if(movie.question1.choices[i].isCorrect == true) {
-//                 alert("correct")
-//             } else {
-//                 alert("incorrect")
-//             }
-//         })
+// function sixthQuestion () {
+//     document.querySelector(".next").addEventListener('click', function() {
+//         for (let i = 0; i < 6; i++) {
+//             document.querySelectorAll("h3")[i].innerHTML = movie.question6.choices[i].text;
+//             document.querySelectorAll(".pics")[i].setAttribute('src', movie.question6.choices[i].image);
+//             document.querySelector("h2").innerHTML = movie.question6.question;
+//             // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//             document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                 if(movie.question6.choices[i].isCorrect == true) {
+//                     alert("correct")
+//                 } else {
+//                     alert("incorrect")
+//                 }
+//             })
+//         }
+//     })
 //     }
-// })
+// function fifthQuestion () {
+//     document.querySelector(".next").addEventListener('click', function() {
+//         for (let i = 0; i < 6; i++) {
+//             document.querySelectorAll("h3")[i].innerHTML = movie.question5.choices[i].text;
+//             document.querySelectorAll(".pics")[i].setAttribute('src', movie.question5.choices[i].image);
+//             document.querySelector("h2").innerHTML = movie.question5.question;
+//             // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//             document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                 if(movie.question5.choices[i].isCorrect == true) {
+//                     alert("correct");
+//                     sixthQuestion()
+//                 } else {
+//                     alert("incorrect");
+//                     sixthQuestion()
+//                 }
+//             })
+//         }
+//     })
+//     }
+// function fourthQuestion () {
+//     document.querySelector(".next").addEventListener('click', function() {
+//         for (let i = 0; i < 6; i++) {
+//             document.querySelectorAll("h3")[i].innerHTML = movie.question4.choices[i].text;
+//             document.querySelectorAll(".pics")[i].setAttribute('src', movie.question4.choices[i].image);
+//             document.querySelector("h2").innerHTML = movie.question4.question;
+//             // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//             document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                 if(movie.question4.choices[i].isCorrect == true) {
+//                     alert("correct");
+//                     fifthQuestion()
+//                 } else {
+//                     alert("incorrect");
+//                     fifthQuestion()
+//                 }
+//             })
+//         }
+//     })
+//     }
+// function thirdQuestion () {
+//     document.querySelector(".next").addEventListener('click', function() {
+//         for (let i = 0; i < 6; i++) {
+//             document.querySelectorAll("h3")[i].innerHTML = movie.question3.choices[i].text;
+//             document.querySelectorAll(".pics")[i].setAttribute('src', movie.question3.choices[i].image);
+//             document.querySelector("h2").innerHTML = movie.question3.question;
+//             // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//             document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                 if(movie.question3.choices[i].isCorrect == true) {
+//                     alert("correct");
+//                     fourthQuestion()
+//                 } else {
+//                     alert("incorrect");
+//                     fourthQuestion()
+//                 }
+//             })
+//         }
+//     })
+//     }
+// function secondQuestion () {
+//     document.querySelector(".next").addEventListener('click', function() {
+//         for (let i = 0; i < 6; i++) {
+//             document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
+//             document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
+//             document.querySelector("h2").innerHTML = movie.question2.question;
+//             // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//             document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                 if(movie.question2.choices[i].isCorrect == true) {
+//                     alert("correct");
+//                     thirdQuestion()
+//                 } else {
+//                     alert("incorrect");
+//                     thirdQuestion()
+//                 }
+//             })
+//         }
+//     })
+//     }
+// let round1 = movie.question1
+let round2 = movie.question2
+let round3 = movie.question3
+let round4 = movie.question4
+let round5 = movie.question5
+let round6 = movie.question6
+
+
+function repopulate(newRound) {document.querySelector(".button-container-top").querySelector("button").addEventListener('click', function() {
+    for (let i = 0; i < 6; i++) {
+        document.querySelectorAll("h3")[i].innerHTML = newRound.choices[i].text;
+        document.querySelectorAll(".pics")[i].setAttribute('src', newRound.choices[i].image);
+        document.querySelector("h2").innerHTML = newRound.question;
+        // document.querySelectorAll(".grid-item")[i].isCorrect = newRound.choices[i].isCorrect;
+        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+            if(newRound.choices[i].isCorrect == true) {
+                alert("correct");
+            } else {
+                alert("incorrect");
+            }
+        })
+    }
+})
+}
+console.log(document.querySelector(".movies").parentNode.nodeName)
+                    // console.log(movie.question1.choices[0].isCorrect)
+                    // console.log(movie.question1.choices[1].isCorrect)
+                    // console.log(movie.question1.choices[2].isCorrect)
+                    // console.log(movie.question1.choices[3].isCorrect)
+document.querySelector(".movies").addEventListener('click', function() {
+    document.createElement('button').className = "movies";
+    document.createElement('button').innerHTML = "Next Round";
+    document.querySelector(".button-container-top").appendChild(document.createElement('button'));
+    document.querySelector(".movies").remove();
+    document.querySelector(".tv").remove();
+    document.querySelector(".books").remove()
+    for (let i = 0; i < 6; i++) {
+        document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
+        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question1.choices[i].image);
+        document.querySelector("h2").innerHTML = movie.question1.question;
+        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+            if(movie.question1.choices[i].isCorrect == true) {
+                alert("correct");
+                for (let i = 0; i < 6; i++) {
+                    movie.question2.choices[i].isCorrect;
+                    // delete movie.question1.choices[i]['isCorrect']
+                    // console.log(movie.question2.choices[0].isCorrect)
+                    // console.log(movie.question2.choices[1].isCorrect)
+                    // console.log(movie.question2.choices[2].isCorrect)
+                    // console.log(movie.question2.choices[3].isCorrect)
+                }
+                repopulate(round2)
+            } else {
+                alert("incorrect");
+                for (let i = 0; i < 6; i++) {
+                    delete movie.question1.choices[i].isCorrect
+                }
+                repopulate(round2)
+            }
+        })
+    }
+})
 
 
 // function next(newQuestion) {
@@ -272,50 +411,50 @@ movie = {
 //     }
 // })
 // }
-document.querySelector(".next").addEventListener('click', function() {
-    for (let i = 0; i < 6; i++) {
-        document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
-        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question1.choices[i].image);
-        document.querySelector("h2").innerHTML = movie.question1.question;
-        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
-        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
-            if(movie.question1.choices[i].isCorrect == true) {
-                alert("correct")
-                document.querySelector(".next").addEventListener('click', function() {
-                    for (let i = 0; i < 6; i++) {
-                        document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
-                        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
-                        document.querySelector("h2").innerHTML = movie.question2.question;
-                        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
-                        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
-                            if(movie.question2.choices[i].isCorrect == true) {
-                                alert("correct")
-                            } else {
-                                alert("incorrect")
-                            }
-                        })
-                    }
-                })
+// document.querySelector(".next").addEventListener('click', function() {
+//     for (let i = 0; i < 6; i++) {
+//         document.querySelectorAll("h3")[i].innerHTML = movie.question1.choices[i].text;
+//         document.querySelectorAll(".pics")[i].setAttribute('src', movie.question1.choices[i].image);
+//         document.querySelector("h2").innerHTML = movie.question1.question;
+//         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//             if(movie.question1.choices[i].isCorrect == true) {
+//                 alert("correct")
+//                 document.querySelector(".next").addEventListener('click', function() {
+//                     for (let i = 0; i < 6; i++) {
+//                         document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
+//                         document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
+//                         document.querySelector("h2").innerHTML = movie.question2.question;
+//                         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//                         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                             if(movie.question2.choices[i].isCorrect == true) {
+//                                 alert("correct")
+//                             } else {
+//                                 alert("incorrect")
+//                             }
+//                         })
+//                     }
+//                 })
                 
-            } else {
-                alert("incorrect")
-                document.querySelector(".next").addEventListener('click', function() {
-                    for (let i = 0; i < 6; i++) {
-                        document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
-                        document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
-                        document.querySelector("h2").innerHTML = movie.question2.question;
-                        // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
-                        document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
-                            if(movie.question2.choices[i].isCorrect == true) {
-                                alert("correct")
-                            } else {
-                                alert("incorrect")
-                            }
-                        })
-                    }
-                })
+//             } else {
+//                 alert("incorrect")
+//                 document.querySelector(".next").addEventListener('click', function() {
+//                     for (let i = 0; i < 6; i++) {
+//                         document.querySelectorAll("h3")[i].innerHTML = movie.question2.choices[i].text;
+//                         document.querySelectorAll(".pics")[i].setAttribute('src', movie.question2.choices[i].image);
+//                         document.querySelector("h2").innerHTML = movie.question2.question;
+//                         // document.querySelectorAll("h6")[i].innerHTML = movie.question1.choices[i].isCorrect;
+//                         document.querySelectorAll(".grid-item")[i].addEventListener('click', function() {
+//                             if(movie.question2.choices[i].isCorrect == true) {
+//                                 alert("correct")
+//                             } else {
+//                                 alert("incorrect")
+//                             }
+//                         })
+//                     }
+//                 })
                 
-            }
-        })
-    }
-})
+//             }
+//         })
+//     }
+// })

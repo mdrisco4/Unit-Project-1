@@ -65,6 +65,20 @@ h6 {
     font-size: 24px;
     padding: 0;
 }
+.moviesRound2 {
+    height: 60px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 24px;
+    padding: 0;
+}
+button {
+    height: 60px;
+    width: 120px;
+    border-radius: 12px;
+    font-size: 24px;
+    padding: 0;
+}
 button:hover {
     color: chartreuse;
     background-color: coral;
