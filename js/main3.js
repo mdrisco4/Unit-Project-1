@@ -377,7 +377,7 @@ const tv = [
                 isCorrect: false
             },
             {
-                text: "Kenny",
+                text: "Kenny McCormick",
                 image: "images/kenny.jpeg",
                 isCorrect: false
             },
@@ -864,19 +864,18 @@ function renderMovieQuestion () {
         getH2.innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                score ++
+                newScore = Math.trunc(score += 1/roundCounter)
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             } else {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             }
         })
     }
     roundCounter++
-    // console.log(roundCounter)
 }
 }
 
@@ -890,7 +889,7 @@ function renderTVQuestion () {
         getH2.innerHTML = tv[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(tv[roundCounter - 1].choices[i].isCorrect == true) {
-                score++
+                newScore = Math.trunc(score += 1/roundCounter)
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -915,7 +914,7 @@ function renderBooksQuestion () {
         getH2.innerHTML = books[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(books[roundCounter - 1].choices[i].isCorrect == true) {
-                score++
+                newScore = Math.trunc(score += 1/roundCounter)
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -954,7 +953,7 @@ document.querySelector(".tv").addEventListener('click', function() {
         document.querySelector(".movies").remove();
         document.querySelector(".tv").remove();
         document.querySelector(".books").remove()
-    })
+})
 
 document.querySelector(".books").addEventListener('click', function() {
     var btn = document.createElement('button')
@@ -967,7 +966,7 @@ document.querySelector(".books").addEventListener('click', function() {
         document.querySelector(".movies").remove();
         document.querySelector(".tv").remove();
         document.querySelector(".books").remove()
-        })
+})
 
 
 
