@@ -217,7 +217,7 @@ const movies = [
         correctAnswer: "Answer: Katherine Hepburn"
     },
     {
-        question: "GAME OVER, PLAY AGAIN?",
+        question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
                 text: "Great job!",
@@ -250,7 +250,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "GAME OVER, PLAY AGAIN?"
+        correctAnswer: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!"
     }
 ]
 const tv = [
@@ -472,7 +472,7 @@ const tv = [
         correctAnswer: "Answer: 30 Rock"
     },
     {
-        question: "GAME OVER, PLAY AGAIN?",
+        question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
                 text: "Great job!",
@@ -505,7 +505,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "GAME OVER, PLAY AGAIN?"
+        correctAnswer: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!"
     }
 ]
 const books = [
@@ -727,7 +727,7 @@ const books = [
         correctAnswer: "1984"
     },
     {
-        question: "GAME OVER, PLAY AGAIN?",
+        question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
                 text: "Great job!",
@@ -760,14 +760,19 @@ const books = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "GAME OVER, PLAY AGAIN?"
+        correctAnswer: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!"
     }
 ]
 
-
+document.querySelector(".restart").addEventListener('click', function() {
+        location.reload()
+        });
 
 let roundCounter = 0
 let score = 0
+function scoreUpdate() {
+    score++
+}
 
 const gridItems = document.querySelectorAll(".grid-item");
 const questionText = document.querySelector(".question-text");
@@ -784,7 +789,7 @@ function renderMovieQuestion () {
         getH2.innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                score++
+                score ++
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -879,9 +884,6 @@ document.querySelector(".books").addEventListener('click', function() {
         document.querySelector(".books").remove()
         })
 
-// document.querySelector(".button-container-bottom").querySelector(".restart").addEventListener('click', function() {
-//     location.reload()
-//     }
 
 
 /** Quick List
