@@ -221,32 +221,32 @@ const movies = [
         choices: [
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: true
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             }
         ],
@@ -476,32 +476,32 @@ const tv = [
         choices: [
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: true
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             }
         ],
@@ -731,32 +731,32 @@ const books = [
         choices: [
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: true
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             },
             {
                 text: "Great job!",
-                image: "images/placeholderImage.jpeg",
+                image: "images/gameOver.png",
                 isCorrect: false
             }
         ],
@@ -770,9 +770,9 @@ document.querySelector(".restart").addEventListener('click', function() {
 
 let roundCounter = 0
 let score = 0
-function scoreUpdate() {
-    score++
-}
+// function scoreUpdate() {
+//     score++
+// }
 
 const gridItems = document.querySelectorAll(".grid-item");
 const questionText = document.querySelector(".question-text");
@@ -783,6 +783,9 @@ const getElem = document.querySelector
 // render the first question to the dom
 
 function renderMovieQuestion () {
+    if (roundCounter == 7) {
+        document.querySelector(".button-container-top").style.visibility = "hidden";
+    } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = movies[roundCounter].choices[i].text;
         getAllPics[i].setAttribute('src', movies[roundCounter].choices[i].image);
@@ -801,9 +804,14 @@ function renderMovieQuestion () {
         })
     }
     roundCounter++
+    // console.log(roundCounter)
+}
 }
 
 function renderTVQuestion () {
+    if (roundCounter == 7) {
+        document.querySelector(".button-container-top").style.visibility = "hidden";
+    } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = tv[roundCounter].choices[i].text;
         getAllPics[i].setAttribute('src', tv[roundCounter].choices[i].image);
@@ -823,8 +831,12 @@ function renderTVQuestion () {
     }
     roundCounter++
 }
+}
 
 function renderBooksQuestion () {
+    if (roundCounter == 7) {
+        document.querySelector(".button-container-top").style.visibility = "hidden";
+    } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = books[roundCounter].choices[i].text;
         getAllPics[i].setAttribute('src', books[roundCounter].choices[i].image);
@@ -843,6 +855,7 @@ function renderBooksQuestion () {
         })
     }
     roundCounter++
+}
 }
 
 document.querySelector(".movies").addEventListener('click', function() {

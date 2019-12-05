@@ -10,6 +10,18 @@ h1 {
     margin: 0;
     padding: 0;
     border: 0;
+    animation: spin 3.5s linear infinite 1s;
+}
+@keyframes spin {
+    from {
+      transform:rotateY(0deg);
+  }
+    to {
+      transform:rotateX(360deg);
+  }
+    from {
+      transform: rotateX(0deg);
+  }
 }
 h2 {
     text-align: center;
@@ -71,6 +83,7 @@ h6 {
 .button-container-top {
     text-align: center;
     padding: 30px;
+    visibility: visible;
 }
 .grid-container {
     display: grid;
@@ -85,6 +98,7 @@ h6 {
     background-color: yellow;
     color: darkblue;
     transition: all .6s;
+    /* animation: spin 3.5s linear infinite 1s; */
 }
 .grid-item img {
     height: 210px;
@@ -104,6 +118,8 @@ h6 {
 .button-container-bottom {
     text-align: center;
     padding: 30px;
+    margin: 0;
+    padding: 0;
 }
 .movies, .tv, .books{
     height: 60px;
@@ -111,6 +127,8 @@ h6 {
     border-radius: 12px;
     font-size: 24px;
     padding: 0;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 button {
     height: 60px;
