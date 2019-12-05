@@ -878,8 +878,10 @@ document.querySelector(".books").addEventListener('click', function() {
         document.querySelector(".tv").remove();
         document.querySelector(".books").remove()
         })
-    
 
+// document.querySelector(".button-container-bottom").querySelector(".restart").addEventListener('click', function() {
+//     location.reload()
+//     }
 
 
 /** Quick List
