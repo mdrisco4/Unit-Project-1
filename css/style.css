@@ -11,6 +11,7 @@ h1 {
     padding: 0;
     border: 0;
     animation: spin 3.5s linear infinite 1s;
+    text-shadow: 6px 6px rgb(255, 0, 0);
 }
 @keyframes spin {
     from {
@@ -38,6 +39,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-family: 'Audiowide', cursive;
+    text-shadow: 4px 4px black;
 }
 h3 {
     text-align: center;
@@ -76,6 +78,7 @@ h4 {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'Audiowide', cursive;
+    text-shadow: 4px 4px black;
 }
 h6 {
     font-size: medium;
@@ -149,5 +152,5 @@ button:hover {
     color: chartreuse;
     background-color: coral;
     border: 6px solid yellow;
-    transform: scale(1.2);
+    transform: scale(1.5);
 }

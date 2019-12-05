@@ -217,6 +217,42 @@ const movies = [
         correctAnswer: "Answer: Katherine Hepburn"
     },
     {
+        question: "Bruce Willis played a time travelling criminal in what movie?",
+        choices: [
+            {
+                text: "Hudson Hawk",
+                image: "images/HudsonHawk.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Die Hard With A Vengence",
+                image: "images/dieHard3.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Twelve Monkeys",
+                image: "images/12Monkeys.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "THe Fifth Element",
+                image: "images/fifthElement.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Red",
+                image: "images/red.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "The Whole Nine Yards",
+                image: "images/wholeNine.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Answer: Twelve Monkeys"
+    },
+    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -470,6 +506,42 @@ const tv = [
             }
         ],
         correctAnswer: "Answer: 30 Rock"
+    },
+    {
+        question: "What Brooklyn Nine-Nine character went to school with main character, Peralta?",
+        choices: [
+            {
+                text: "Terry Jeffords",
+                image: "images/terryJeffords.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Amy Santiago",
+                image: "images/amySantiago.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Rosa Diaz",
+                image: "images/rosaDiaz.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Charles Boyle",
+                image: "images/charlesBoyle.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Gina Linetti",
+                image: "images/ginaLinetti.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Ray Holt",
+                image: "images/rayHolt.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!"
     },
     {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
@@ -783,7 +855,7 @@ const getElem = document.querySelector
 // render the first question to the dom
 
 function renderMovieQuestion () {
-    if (roundCounter == 7) {
+    if (roundCounter == 8) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
@@ -809,7 +881,7 @@ function renderMovieQuestion () {
 }
 
 function renderTVQuestion () {
-    if (roundCounter == 7) {
+    if (roundCounter == 8) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
@@ -905,3 +977,4 @@ document.querySelector(".books").addEventListener('click', function() {
  * 2. add event listeners to each of the gridItems
  *    it will check the isCorrect property of the choice that corresponds with its index
  */
+
