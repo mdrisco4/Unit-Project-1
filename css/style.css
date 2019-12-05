@@ -101,6 +101,7 @@ h6 {
     color: darkorange;
     background-color: darkturquoise;
     border: 6px solid darkviolet;
+    transform: scale(1.25);
 }
 .button-container-bottom {
     text-align: center;
@@ -133,4 +134,5 @@ button:hover {
     color: chartreuse;
     background-color: coral;
     border: 6px solid yellow;
+    transform: scale(1.2);
 }
