@@ -34,7 +34,7 @@ const movies = [
             }
         ]
         ,
-        correctAnswer: "Dr. No"
+        correctAnswer: "Answer: Dr. No"
     },
     {
         question: "What X-Men movie was based in the 1960s?",
@@ -70,7 +70,7 @@ const movies = [
                 isCorrect: true
             }
         ],
-        correctAnswer: "X-Men: First Class"
+        correctAnswer: "Answer: X-Men: First Class"
     },
     {
         question: "What year was the first Star Wars film released?",
@@ -106,7 +106,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "1977"
+        correctAnswer: "Answer: 1977"
     },
     {
         question: "What movie has won the most oscars in history?",
@@ -142,7 +142,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Ben-Hur"
+        correctAnswer: "Answer: Ben-Hur"
     },
     {
         question: "What Lord of the Rings character was tasked with destroying the one ring?",
@@ -178,7 +178,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Frodo"
+        correctAnswer: "Answer: Frodo"
     },
     {
         question: "Who has won the most Oscars in history?",
@@ -214,7 +214,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Katherine Hepburn"
+        correctAnswer: "Answer: Katherine Hepburn"
     },
     {
         question: "GAME OVER, PLAY AGAIN?",
@@ -250,7 +250,7 @@ const movies = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Katherine Hepburn"
+        correctAnswer: "GAME OVER, PLAY AGAIN?"
     }
 ]
 const tv = [
@@ -289,7 +289,7 @@ const tv = [
             }
         ]
         ,
-        correctAnswer: "Superman"
+        correctAnswer: "Answer: Superman"
     },
     {
         question: "Where was the American crime drama `Narcos` filmed?",
@@ -325,7 +325,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Columbia"
+        correctAnswer: "Answer: Columbia"
     },
     {
         question: "Whow won 2.5 million dollars on Jeopardy?",
@@ -361,7 +361,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Ken Jennings"
+        correctAnswer: "Answer: Ken Jennings"
     },
     {
         question: "What year did The Simpsons first appear on television?",
@@ -397,7 +397,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "1987 (on The Tracey Ullman Show)"
+        correctAnswer: "Answer: 1987 (on The Tracey Ullman Show)"
     },
     {
         question: "What famed television family owned a banana stand and drove a stair car?",
@@ -433,7 +433,7 @@ const tv = [
                 isCorrect: true
             }
         ],
-        correctAnswer: "The Bluths"
+        correctAnswer: "Answer: The Bluths"
     },
     {
         question: "What sitcom follows the life of Liz Lemon, a writer for `The Girlie Show?`",
@@ -469,7 +469,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "30 Rock"
+        correctAnswer: "Answer: 30 Rock"
     },
     {
         question: "GAME OVER, PLAY AGAIN?",
@@ -505,7 +505,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Katherine Hepburn"
+        correctAnswer: "GAME OVER, PLAY AGAIN?"
     }
 ]
 const books = [
@@ -760,7 +760,7 @@ const books = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Katherine Hepburn"
+        correctAnswer: "GAME OVER, PLAY AGAIN?"
     }
 ]
 
@@ -780,20 +780,20 @@ function renderMovieQuestion () {
         document.querySelector("h2").innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                // score += 1
+                score = score + 1
                 document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                // document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
                 document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
         })
     }
     roundCounter++
-    score += 1
-    document.querySelector(".score").innerHTML = score
+    // score += 1
+    // document.querySelector(".score").innerHTML = "Score:" + " " + score
 }
 
 function renderTVQuestion () {
@@ -806,11 +806,11 @@ function renderTVQuestion () {
                 score += 1
                 document.querySelector("h2").innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
                 document.querySelector("h2").innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
         })
     }
@@ -827,11 +827,11 @@ function renderBooksQuestion () {
                 score += 1
                 document.querySelector("h2").innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
                 document.querySelector("h2").innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = score
+                document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
         })
     }

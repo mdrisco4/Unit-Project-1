@@ -14,19 +14,28 @@ h2 {
     box-sizing: border-box;
     text-align: center;
     height: 120px;
-    width: 80%;
+    width: 90%;
     font-size: 42px;
-    margin-left: 10%;
+    margin: 0 auto;
     background-color: rgb(45, 233, 189);
     color: magenta;
     border: 6px solid red;
     /* padding-top: 20px; */
     border-radius: 86px;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 h3 {
     text-align: center;
     padding: 0;
     margin: 9px;
+    height: 48px;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 .score-container {
     display: flex;
@@ -69,17 +78,33 @@ h6 {
     font-size: 21px;
     background-color: yellow;
     color: darkblue;
+    /* -moz-animation-name: slide 0.5s forwards; */
+    /* animation-fill-mode: forwards; */
     /* display: ; */
     /* visibility: hidden; */
     /* opacity: 0; */
 }
+/* @keyframes slide { 
+    @keyframes slide {
+        100% { left: 0; } */
+    /* }
+    to {
+
+    }
+} */
 .grid-item img {
     height: 210px;
     width: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 8px;
     border-radius: 12px;
+}
+.grid-item:hover {
+    color: darkorange;
+    background-color: darkturquoise;
+    border: 6px solid darkviolet;
 }
 .button-container-bottom {
     text-align: center;
