@@ -541,7 +541,7 @@ const tv = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!"
+        correctAnswer: "Gina Linetti"
     },
     {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
@@ -799,6 +799,42 @@ const books = [
         correctAnswer: "1984"
     },
     {
+        question: "What literary character has been portrayed by the most actors?",
+        choices: [
+            {
+                text: "Jack Ryan",
+                image: "images/jackRyan.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Dracula",
+                image: "images/dracula.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Sherlock Holmes",
+                image: "images/sherlock.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Dr. Frakenstein",
+                image: "images/frankenstein.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "James Bond",
+                image: "images/007.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Hannibal Lecter",
+                image: "images/hannibal.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Sherlock Holmes"
+    },
+    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -901,7 +937,7 @@ function renderTVQuestion () {
 }
 
 function renderBooksQuestion () {
-    if (roundCounter == 7) {
+    if (roundCounter == 8) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
