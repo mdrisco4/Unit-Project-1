@@ -34,7 +34,7 @@ const movies = [
             }
         ]
         ,
-        correctAnswer: "Answer: Dr. No"
+        correctAnswer: "Answer: Dr. No (1962)"
     },
     {
         question: "What X-Men movie was based in the 1960s?",
@@ -696,7 +696,7 @@ const books = [
             {
                 text: "Animal Farm",
                 image: "images/animalFarm.jpeg",
-                isCorrect: true
+                isCorrect: false
             },
             {
                 text: "Brave New World",
@@ -706,7 +706,7 @@ const books = [
             {
                 text: "1984",
                 image: "images/1984.jpeg",
-                isCorrect: false
+                isCorrect: true
             },
             {
                 text: "Logan's Run",
@@ -724,7 +724,7 @@ const books = [
                 isCorrect: false
             }
         ],
-        correctAnswer: "Katherine Hepburn"
+        correctAnswer: "1984"
     },
     {
         question: "GAME OVER, PLAY AGAIN?",
@@ -769,23 +769,27 @@ const books = [
 let roundCounter = 0
 let score = 0
 
-const gridItems = document.querySelectorAll(".grid-item")
-const questionText = document.querySelector(".question-text")
+const gridItems = document.querySelectorAll(".grid-item");
+const questionText = document.querySelector(".question-text");
+const getAllH3 = document.querySelectorAll("h3");
+const getAllPics = document.querySelectorAll(".pics")
+const getH2 = document.querySelector("h2")
+const getElem = document.querySelector
 // render the first question to the dom
 
 function renderMovieQuestion () {
     for (let i = 0; i < 6; i++) {
-        document.querySelectorAll("h3")[i].innerHTML = movies[roundCounter].choices[i].text;
-        document.querySelectorAll(".pics")[i].setAttribute('src', movies[roundCounter].choices[i].image);
-        document.querySelector("h2").innerHTML = movies[roundCounter].question;
+        getAllH3[i].innerHTML = movies[roundCounter].choices[i].text;
+        getAllPics[i].setAttribute('src', movies[roundCounter].choices[i].image);
+        getH2.innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
                 score++
-                document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
-                document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
@@ -796,17 +800,17 @@ function renderMovieQuestion () {
 
 function renderTVQuestion () {
     for (let i = 0; i < 6; i++) {
-        document.querySelectorAll("h3")[i].innerHTML = tv[roundCounter].choices[i].text;
-        document.querySelectorAll(".pics")[i].setAttribute('src', tv[roundCounter].choices[i].image);
-        document.querySelector("h2").innerHTML = tv[roundCounter].question;
+        getAllH3[i].innerHTML = tv[roundCounter].choices[i].text;
+        getAllPics[i].setAttribute('src', tv[roundCounter].choices[i].image);
+        getH2.innerHTML = tv[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(tv[roundCounter - 1].choices[i].isCorrect == true) {
                 score++
-                document.querySelector("h2").innerHTML = tv[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
-                document.querySelector("h2").innerHTML = tv[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
@@ -817,17 +821,17 @@ function renderTVQuestion () {
 
 function renderBooksQuestion () {
     for (let i = 0; i < 6; i++) {
-        document.querySelectorAll("h3")[i].innerHTML = books[roundCounter].choices[i].text;
-        document.querySelectorAll(".pics")[i].setAttribute('src', books[roundCounter].choices[i].image);
-        document.querySelector("h2").innerHTML = books[roundCounter].question;
+        getAllH3[i].innerHTML = books[roundCounter].choices[i].text;
+        getAllPics[i].setAttribute('src', books[roundCounter].choices[i].image);
+        getH2.innerHTML = books[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(books[roundCounter - 1].choices[i].isCorrect == true) {
                 score++
-                document.querySelector("h2").innerHTML = books[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             } else {
-                document.querySelector("h2").innerHTML = books[roundCounter - 1].correctAnswer;
+                getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
             }
