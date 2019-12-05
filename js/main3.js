@@ -780,7 +780,7 @@ function renderMovieQuestion () {
         document.querySelector("h2").innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                score = score + 1
+                score++
                 document.querySelector("h2").innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -792,8 +792,6 @@ function renderMovieQuestion () {
         })
     }
     roundCounter++
-    // score += 1
-    // document.querySelector(".score").innerHTML = "Score:" + " " + score
 }
 
 function renderTVQuestion () {
@@ -803,7 +801,7 @@ function renderTVQuestion () {
         document.querySelector("h2").innerHTML = tv[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(tv[roundCounter - 1].choices[i].isCorrect == true) {
-                score += 1
+                score++
                 document.querySelector("h2").innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -824,7 +822,7 @@ function renderBooksQuestion () {
         document.querySelector("h2").innerHTML = books[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(books[roundCounter - 1].choices[i].isCorrect == true) {
-                score += 1
+                score++
                 document.querySelector("h2").innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + score
@@ -864,17 +862,17 @@ document.querySelector(".tv").addEventListener('click', function() {
         document.querySelector(".books").remove()
     })
 
-    document.querySelector(".books").addEventListener('click', function() {
-        var btn = document.createElement('button')
-            btn.className = "start";
-            btn.innerHTML = "NEXT";
-            btn.addEventListener('click', function() {
+document.querySelector(".books").addEventListener('click', function() {
+    var btn = document.createElement('button')
+        btn.className = "start";
+        btn.innerHTML = "NEXT";
+        btn.addEventListener('click', function() {
                 renderBooksQuestion()
-            })
-            document.querySelector(".button-container-top").appendChild(btn);
-            document.querySelector(".movies").remove();
-            document.querySelector(".tv").remove();
-            document.querySelector(".books").remove()
+        })
+        document.querySelector(".button-container-top").appendChild(btn);
+        document.querySelector(".movies").remove();
+        document.querySelector(".tv").remove();
+        document.querySelector(".books").remove()
         })
     
 

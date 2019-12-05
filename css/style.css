@@ -1,14 +1,17 @@
+    /* font-family: 'Chela One', cursive; */
+    /* font-family: 'Permanent Marker', cursive; */
 body {
-    background-color: violet;
+    background-image: url("../images/backgroundImage.jpeg")
 }
 
 h1 {
     text-align: center;
-    font-size: 140px;
+    font-size: 100px;
     color: lime;
-    font-family: 'Chela One', cursive;
-    padding: 0;
+    font-family: 'Shrikhand', cursive;
     margin: 0;
+    padding: 0;
+    border: 0;
 }
 h2 {
     box-sizing: border-box;
@@ -20,7 +23,6 @@ h2 {
     background-color: rgb(45, 233, 189);
     color: magenta;
     border: 6px solid red;
-    /* padding-top: 20px; */
     border-radius: 86px;
     display: flex;
     flex-flow: nowrap;
@@ -41,23 +43,31 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 h4 {
     text-align: center;
     vertical-align: middle;
-    height: 50px;
+    height: 36px;
     width: 25%;
     font-size: 42px;
-    /* margin-left: 25%;
-    margin-right: 25%; */
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(45, 233, 189);
     color: magenta;
     border: 6px solid red;
-    /* padding-bottom: 6px; */
     border-radius: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 h6 {
-    /* display: none; */
     font-size: medium;
 }
 .button-container-top {
@@ -66,10 +76,9 @@ h6 {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 280px 280px 280px;
-    grid-template-rows: 360px 360px;
+    grid-template-columns: 280px 280px 280px 280px 280px 280px;
+    grid-template-rows: 360px;
     justify-content: center;
-    /* visibility: hidden; */
 }
 .grid-item {
     border: 1px solid black;
@@ -78,20 +87,7 @@ h6 {
     font-size: 21px;
     background-color: yellow;
     color: darkblue;
-    /* -moz-animation-name: slide 0.5s forwards; */
-    /* animation-fill-mode: forwards; */
-    /* display: ; */
-    /* visibility: hidden; */
-    /* opacity: 0; */
 }
-/* @keyframes slide { 
-    @keyframes slide {
-        100% { left: 0; } */
-    /* }
-    to {
-
-    }
-} */
 .grid-item img {
     height: 210px;
     width: 150px;
