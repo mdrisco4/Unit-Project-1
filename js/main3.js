@@ -842,9 +842,6 @@ document.querySelector(".restart").addEventListener('click', function() {
 
 let roundCounter = 0
 let score = 0
-// function scoreUpdate() {
-//     score++
-// }
 
 const gridItems = document.querySelectorAll(".grid-item");
 const questionText = document.querySelector(".question-text");
@@ -852,7 +849,6 @@ const getAllH3 = document.querySelectorAll("h3");
 const getAllPics = document.querySelectorAll(".pics")
 const getH2 = document.querySelector("h2")
 const getElem = document.querySelector
-// render the first question to the dom
 
 function renderMovieQuestion () {
     if (roundCounter == 8) {
@@ -892,11 +888,11 @@ function renderTVQuestion () {
                 newScore = Math.trunc(score += 1/roundCounter)
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             } else {
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             }
         })
     }
@@ -917,11 +913,11 @@ function renderBooksQuestion () {
                 newScore = Math.trunc(score += 1/roundCounter)
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             } else {
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + score
+                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
             }
         })
     }
@@ -967,13 +963,3 @@ document.querySelector(".books").addEventListener('click', function() {
         document.querySelector(".tv").remove();
         document.querySelector(".books").remove()
 })
-
-
-
-/** Quick List
- * 1. renderQuestion will update the DOM with the question and choices data
- *  of the current question, determined by the  roundCounter variable
- * 2. add event listeners to each of the gridItems
- *    it will check the isCorrect property of the choice that corresponds with its index
- */
-
