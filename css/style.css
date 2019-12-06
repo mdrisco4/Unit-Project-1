@@ -96,7 +96,6 @@ h6 {
     transition: all .6s;
     animation-name: slidein;
     animation-duration: .5s;
-    /* animation: spin 3.5s linear infinite 1s; */
 }
 .grid-item img {
     height: 210px;
@@ -123,7 +122,7 @@ h6 {
 }
 .movies, .tv, .books{
     height: 60px;
-    width: 120px;
+    width: 144px;
     border-radius: 12px;
     font-size: 24px;
     padding: 0;
