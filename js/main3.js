@@ -328,7 +328,7 @@ const tv = [
         correctAnswer: "Answer: 1987 (on The Tracey Ullman Show)"
     },
     {
-        question: "Whow won 2.5 million dollars on Jeopardy?",
+        question: "Who won 2.5 million dollars on Jeopardy?",
         choices: [
             {
                 text: "Kenneth Starr",
