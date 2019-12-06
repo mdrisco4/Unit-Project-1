@@ -902,7 +902,7 @@ function renderTVQuestion () {
         getH2.innerHTML = tv[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(tv[roundCounter - 1].choices[i].isCorrect == true) {
-                score += 1/roundCounter
+                score += (1/roundCounter - .05)
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
@@ -916,6 +916,7 @@ function renderTVQuestion () {
     roundCounter++
 }
 }
+
 function renderBooksQuestion () {
     if (roundCounter == 5) {
         var btn = document.createElement('button')
@@ -933,7 +934,7 @@ function renderBooksQuestion () {
         getH2.innerHTML = books[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(books[roundCounter - 1].choices[i].isCorrect == true) {
-                score += 1/roundCounter
+                score += (1/roundCounter - .05)
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
