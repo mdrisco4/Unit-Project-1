@@ -746,7 +746,7 @@ const books = [
             },
             {
                 text: "The Lion, The Witch and The Wardrobe",
-                image: "images/lionWitchWardrobe.jpeg",
+                image: "images/lionWitch.jpeg",
                 isCorrect: false
             },
             {
