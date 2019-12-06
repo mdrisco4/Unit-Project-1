@@ -181,6 +181,42 @@ const movies = [
         correctAnswer: "Answer: Frodo"
     },
     {
+        question: "Who has won the most Oscars in history?",
+        choices: [
+            {
+                text: "Katherine Hepburn",
+                image: "images/katherineHepburn.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Pauly Shore",
+                image: "images/paulyShore.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Marlon Brando",
+                image: "images/marloBrando.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Meryl Streep",
+                image: "images/merylStreep.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Daniel Day-Lewis",
+                image: "images/danielDayLewis.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Carrot Top",
+                image: "images/carrotTop.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Answer: Katherine Hepburn"
+    },
+    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -398,6 +434,42 @@ const tv = [
             }
         ],
         correctAnswer: "Answer: 30 Rock"
+    },
+    {
+        question: "What Brooklyn Nine-Nine character went to school with main character, Peralta?",
+        choices: [
+            {
+                text: "Terry Jeffords",
+                image: "images/terryJeffords.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Amy Santiago",
+                image: "images/amySantiago.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Rosa Diaz",
+                image: "images/rosaDiaz.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Charles Boyle",
+                image: "images/charlesBoyle.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Gina Linetti",
+                image: "images/ginaLinetti.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Ray Holt",
+                image: "images/rayHolt.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Gina Linetti"
     },
     {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
@@ -618,6 +690,42 @@ const books = [
         correctAnswer: "1984"
     },
     {
+        question: "What literary character has been portrayed by the most actors?",
+        choices: [
+            {
+                text: "Jack Ryan",
+                image: "images/jackRyan.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Dracula",
+                image: "images/dracula.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Sherlock Holmes",
+                image: "images/sherlock.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Dr. Frakenstein",
+                image: "images/frankenstein.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "James Bond",
+                image: "images/007.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Hannibal Lecter",
+                image: "images/hannibal.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Sherlock Holmes"
+    },
+    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -670,9 +778,88 @@ const getAllPics = document.querySelectorAll(".pics")
 const getH2 = document.querySelector("h2")
 const getElem = document.querySelector
 
+function bonusMovieQuestion () {
+    for (let i = 0; i < 6; i++) {
+        getAllH3[i].innerHTML = movies[5].choices[i].text;
+        getAllPics[i].setAttribute('src', movies[5].choices[i].image);
+        getH2.innerHTML = movies[6].question;
+        gridItems[i].addEventListener('click', function() {
+            if (roundCounter == 6) {
+                document.querySelector(".button-container-top").style.visibility = "hidden";
+            }
+            else if(movies[5].choices[i].isCorrect == true) {
+                score += 3
+                getH2.innerHTML = movies[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            } else {
+                getH2.innerHTML = movies[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            }
+        })
+    }
+    roundCounter++
+}
+
+function bonusTVQuestion () {
+    for (let i = 0; i < 6; i++) {
+        getAllH3[i].innerHTML = tv[5].choices[i].text;
+        getAllPics[i].setAttribute('src', tv[5].choices[i].image);
+        getH2.innerHTML = tv[6].question;
+        gridItems[i].addEventListener('click', function() {
+            if (roundCounter == 6) {
+                document.querySelector(".button-container-top").style.visibility = "hidden";
+            }
+            else if(movies[5].choices[i].isCorrect == true) {
+                score += 3
+                getH2.innerHTML = tv[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            } else {
+                getH2.innerHTML = tv[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            }
+        })
+    }
+    roundCounter++
+}
+
+function bonusBooksQuestion () {
+    for (let i = 0; i < 6; i++) {
+        getAllH3[i].innerHTML = books[5].choices[i].text;
+        getAllPics[i].setAttribute('src', books[5].choices[i].image);
+        getH2.innerHTML = books[6].question;
+        gridItems[i].addEventListener('click', function() {
+            if (roundCounter == 6) {
+                document.querySelector(".button-container-top").style.visibility = "hidden";
+            }
+            else if(movies[5].choices[i].isCorrect == true) {
+                score += 3
+                getH2.innerHTML = books[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            } else {
+                getH2.innerHTML = books[5].correctAnswer;
+                document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+            }
+        })
+    }
+    roundCounter++
+}
+
 function renderMovieQuestion () {
-    if (roundCounter == 6) {
-        document.querySelector(".button-container-top").style.visibility = "hidden";
+    if (roundCounter == 5) {
+        var btn = document.createElement('button')
+        btn.className = "bonus";
+        btn.innerHTML = "BONUS";
+        btn.addEventListener('click', function() {
+                bonusMovieQuestion()
+        })
+        document.querySelector(".button-container-top").appendChild(btn);
+        document.querySelector(".start").remove();
     } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = movies[roundCounter].choices[i].text;
@@ -684,9 +871,6 @@ function renderMovieQuestion () {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
-                console.log(score)
-                console.log("roundCounter")
-                console.log(1/roundCounter)
             } else {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
@@ -699,8 +883,15 @@ function renderMovieQuestion () {
 }
 
 function renderTVQuestion () {
-    if (roundCounter == 6) {
-        document.querySelector(".button-container-top").style.visibility = "hidden";
+    if (roundCounter == 5) {
+        var btn = document.createElement('button')
+        btn.className = "bonus";
+        btn.innerHTML = "BONUS";
+        btn.addEventListener('click', function() {
+                bonusTVQuestion()
+        })
+        document.querySelector(".button-container-top").appendChild(btn);
+        document.querySelector(".start").remove();
     } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = tv[roundCounter].choices[i].text;
@@ -723,8 +914,15 @@ function renderTVQuestion () {
 }
 }
 function renderBooksQuestion () {
-    if (roundCounter == 6) {
-        document.querySelector(".button-container-top").style.visibility = "hidden";
+    if (roundCounter == 5) {
+        var btn = document.createElement('button')
+        btn.className = "bonus";
+        btn.innerHTML = "BONUS";
+        btn.addEventListener('click', function() {
+                bonusBooksQuestion()
+        })
+        document.querySelector(".button-container-top").appendChild(btn);
+        document.querySelector(".start").remove();
     } else {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = books[roundCounter].choices[i].text;
