@@ -782,12 +782,12 @@ function bonusMovieQuestion () {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = movies[5].choices[i].text;
         getAllPics[i].setAttribute('src', movies[5].choices[i].image);
-        getH2.innerHTML = movies[6].question;
+        getH2.innerHTML = movies[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
                 document.querySelector(".button-container-top").style.visibility = "hidden";
             }
-            else if(movies[5].choices[i].isCorrect == true) {
+            else if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = movies[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -806,12 +806,12 @@ function bonusTVQuestion () {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = tv[5].choices[i].text;
         getAllPics[i].setAttribute('src', tv[5].choices[i].image);
-        getH2.innerHTML = tv[6].question;
+        getH2.innerHTML = tv[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
                 document.querySelector(".button-container-top").style.visibility = "hidden";
             }
-            else if(movies[5].choices[i].isCorrect == true) {
+            else if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = tv[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -830,12 +830,12 @@ function bonusBooksQuestion () {
     for (let i = 0; i < 6; i++) {
         getAllH3[i].innerHTML = books[5].choices[i].text;
         getAllPics[i].setAttribute('src', books[5].choices[i].image);
-        getH2.innerHTML = books[6].question;
+        getH2.innerHTML = books[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
                 document.querySelector(".button-container-top").style.visibility = "hidden";
             }
-            else if(movies[5].choices[i].isCorrect == true) {
+            else if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = books[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -988,43 +988,8 @@ document.querySelector(".books").addEventListener('click', function() {
 ///////BONUS QUESTIONS///////
 
 // MOVIES
+
 /*{
-        question: "Who has won the most Oscars in history?",
-        choices: [
-            {
-                text: "Katherine Hepburn",
-                image: "images/katherineHepburn.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Pauly Shore",
-                image: "images/paulyShore.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Marlon Brando",
-                image: "images/marloBrando.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Meryl Streep",
-                image: "images/merylStreep.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Daniel Day-Lewis",
-                image: "images/danielDayLewis.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Carrot Top",
-                image: "images/carrotTop.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Answer: Katherine Hepburn"
-    },
-    {
         question: "Bruce Willis played a time travelling criminal in what movie?",
         choices: [
             {
@@ -1099,44 +1064,7 @@ document.querySelector(".books").addEventListener('click', function() {
         ],
         correctAnswer: "Answer: Columbia"
     },
-    /*
-    {
-        question: "What Brooklyn Nine-Nine character went to school with main character, Peralta?",
-        choices: [
-            {
-                text: "Terry Jeffords",
-                image: "images/terryJeffords.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Amy Santiago",
-                image: "images/amySantiago.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Rosa Diaz",
-                image: "images/rosaDiaz.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Charles Boyle",
-                image: "images/charlesBoyle.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Gina Linetti",
-                image: "images/ginaLinetti.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Ray Holt",
-                image: "images/rayHolt.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Gina Linetti"
-    },
-    */
+/*
 
 // BOOKS
 /*{
@@ -1176,41 +1104,6 @@ document.querySelector(".books").addEventListener('click', function() {
         ,
         correctAnswer: "Ba! Ba! Black Sheep"
     },
-    /*{
-        question: "What literary character has been portrayed by the most actors?",
-        choices: [
-            {
-                text: "Jack Ryan",
-                image: "images/jackRyan.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Dracula",
-                image: "images/dracula.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Sherlock Holmes",
-                image: "images/sherlock.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Dr. Frakenstein",
-                image: "images/frankenstein.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "James Bond",
-                image: "images/007.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Hannibal Lecter",
-                image: "images/hannibal.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Sherlock Holmes"
-    },
     */
+  
     
