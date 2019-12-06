@@ -785,9 +785,9 @@ function bonusMovieQuestion () {
         getH2.innerHTML = movies[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
-                document.querySelector(".button-container-top").style.visibility = "hidden";
-            }
-            else if (movies[5].choices[i].isCorrect == true) {
+                document.querySelector(".bonus").remove();
+            } else {
+            if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = movies[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -797,9 +797,11 @@ function bonusMovieQuestion () {
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        }
+        },{once : true})
     }
     roundCounter++
+    console.log(roundCounter)
 }
 
 function bonusTVQuestion () {
@@ -809,9 +811,9 @@ function bonusTVQuestion () {
         getH2.innerHTML = tv[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
-                document.querySelector(".button-container-top").style.visibility = "hidden";
-            }
-            else if (movies[5].choices[i].isCorrect == true) {
+                document.querySelector(".bonus").remove();
+            } else {
+            if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = tv[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -821,7 +823,8 @@ function bonusTVQuestion () {
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        }
+        },{once : true})
     }
     roundCounter++
 }
@@ -833,9 +836,9 @@ function bonusBooksQuestion () {
         getH2.innerHTML = books[5].question;
         gridItems[i].addEventListener('click', function() {
             if (roundCounter == 6) {
-                document.querySelector(".button-container-top").style.visibility = "hidden";
-            }
-            else if (movies[5].choices[i].isCorrect == true) {
+                document.querySelector(".bonus").remove();
+            } else {
+            if (movies[5].choices[i].isCorrect == true) {
                 score += 3
                 getH2.innerHTML = books[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
@@ -845,9 +848,12 @@ function bonusBooksQuestion () {
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        }
+        },{once : true})
     }
     roundCounter++
+    console.log(score)
+    console.log(1/roundCounter)
 }
 
 function renderMovieQuestion () {
@@ -985,7 +991,7 @@ document.querySelector(".books").addEventListener('click', function() {
 })
 
 
-///////BONUS QUESTIONS///////
+///////POTENTIAL BONUS QUESTIONS///////
 
 // MOVIES
 
