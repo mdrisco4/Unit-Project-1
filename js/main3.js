@@ -181,78 +181,6 @@ const movies = [
         correctAnswer: "Answer: Frodo"
     },
     {
-        question: "Who has won the most Oscars in history?",
-        choices: [
-            {
-                text: "Katherine Hepburn",
-                image: "images/katherineHepburn.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Pauly Shore",
-                image: "images/paulyShore.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Marlon Brando",
-                image: "images/marloBrando.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Meryl Streep",
-                image: "images/merylStreep.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Daniel Day-Lewis",
-                image: "images/danielDayLewis.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Carrot Top",
-                image: "images/carrotTop.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Answer: Katherine Hepburn"
-    },
-    {
-        question: "Bruce Willis played a time travelling criminal in what movie?",
-        choices: [
-            {
-                text: "Hudson Hawk",
-                image: "images/HudsonHawk.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Die Hard With A Vengence",
-                image: "images/dieHard3.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Twelve Monkeys",
-                image: "images/12Monkeys.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "THe Fifth Element",
-                image: "images/fifthElement.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Red",
-                image: "images/red.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "The Whole Nine Yards",
-                image: "images/wholeNine.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Answer: Twelve Monkeys"
-    },
-    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -328,40 +256,40 @@ const tv = [
         correctAnswer: "Answer: Superman"
     },
     {
-        question: "Where was the American crime drama `Narcos` filmed?",
+        question: "What year did The Simpsons first appear on television?",
         choices: [
             {
-                text: "Nicaragua",
-                image: "images/nicaragua.jpeg",
+                text: "1993",
+                image: "images/bart.png",
                 isCorrect: false
             },
             {
-                text: "Venezuela",
-                image: "images/venezuela.jpeg",
+                text: "1991",
+                image: "images/flanders.jpeg",
                 isCorrect: false
             },
             {
-                text: "Bolivia",
-                image: "images/bolivia.jpeg",
+                text: "1995",
+                image: "images/marge.png",
                 isCorrect: false
             },
             {
-                text: "Bolize",
-                image: "images/bolize.jpeg",
+                text: "1989",
+                image: "images/burns.png",
                 isCorrect: false
             },
             {
-                text: "Columbia",
-                image: "images/columbia.jpeg",
+                text: "1987",
+                image: "images/lisa.png",
                 isCorrect: true
             },
             {
-                text: "The Moon",
-                image: "images/moon.jpeg",
+                text: "1982",
+                image: "images/homer.jpeg",
                 isCorrect: false
             }
         ],
-        correctAnswer: "Answer: Columbia"
+        correctAnswer: "Answer: 1987 (on The Tracey Ullman Show)"
     },
     {
         question: "Whow won 2.5 million dollars on Jeopardy?",
@@ -398,42 +326,6 @@ const tv = [
             }
         ],
         correctAnswer: "Answer: Ken Jennings"
-    },
-    {
-        question: "What year did The Simpsons first appear on television?",
-        choices: [
-            {
-                text: "1993",
-                image: "images/bart.png",
-                isCorrect: false
-            },
-            {
-                text: "1991",
-                image: "images/flanders.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "1995",
-                image: "images/marge.png",
-                isCorrect: false
-            },
-            {
-                text: "1989",
-                image: "images/burns.png",
-                isCorrect: false
-            },
-            {
-                text: "1987",
-                image: "images/lisa.png",
-                isCorrect: true
-            },
-            {
-                text: "1982",
-                image: "images/homer.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Answer: 1987 (on The Tracey Ullman Show)"
     },
     {
         question: "What famed television family owned a banana stand and drove a stair car?",
@@ -508,42 +400,6 @@ const tv = [
         correctAnswer: "Answer: 30 Rock"
     },
     {
-        question: "What Brooklyn Nine-Nine character went to school with main character, Peralta?",
-        choices: [
-            {
-                text: "Terry Jeffords",
-                image: "images/terryJeffords.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Amy Santiago",
-                image: "images/amySantiago.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Rosa Diaz",
-                image: "images/rosaDiaz.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Charles Boyle",
-                image: "images/charlesBoyle.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Gina Linetti",
-                image: "images/ginaLinetti.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Ray Holt",
-                image: "images/rayHolt.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Gina Linetti"
-    },
-    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -581,43 +437,6 @@ const tv = [
     }
 ]
 const books = [
-    {
-        question: "What was the working title of the 1936 novel Gone With the Wind?",
-        choices: [
-            {
-                text: "The Plantation",
-                image: "images/goneWithTheWind1.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Ba! Ba! Black Sheep",
-                image: "images/goneWithTheWind2.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "The Rhett Butler Affair",
-                image: "images/goneWithTheWind3.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "The Art of the Deal",
-                image: "images/goneWithTheWind4.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "It",
-                image: "images/goneWithTheWind5.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Tara",
-                image: "images/goneWithTheWind6.jpeg",
-                isCorrect: false
-            }
-        ]
-        ,
-        correctAnswer: "Ba! Ba! Black Sheep"
-    },
     {
         question: "What novel is set on a desert inhabited by giant sandworms?",
         choices: [
@@ -799,42 +618,6 @@ const books = [
         correctAnswer: "1984"
     },
     {
-        question: "What literary character has been portrayed by the most actors?",
-        choices: [
-            {
-                text: "Jack Ryan",
-                image: "images/jackRyan.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Dracula",
-                image: "images/dracula.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Sherlock Holmes",
-                image: "images/sherlock.jpeg",
-                isCorrect: true
-            },
-            {
-                text: "Dr. Frakenstein",
-                image: "images/frankenstein.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "James Bond",
-                image: "images/007.jpeg",
-                isCorrect: false
-            },
-            {
-                text: "Hannibal Lecter",
-                image: "images/hannibal.jpeg",
-                isCorrect: false
-            }
-        ],
-        correctAnswer: "Sherlock Holmes"
-    },
-    {
         question: "GAME OVER, PLAY AGAIN? JUST HIT RESTART!",
         choices: [
             {
@@ -879,6 +662,7 @@ document.querySelector(".restart").addEventListener('click', function() {
 let roundCounter = 0
 let score = 0
 
+
 const gridItems = document.querySelectorAll(".grid-item");
 const questionText = document.querySelector(".question-text");
 const getAllH3 = document.querySelectorAll("h3");
@@ -887,7 +671,7 @@ const getH2 = document.querySelector("h2")
 const getElem = document.querySelector
 
 function renderMovieQuestion () {
-    if (roundCounter == 8) {
+    if (roundCounter == 6) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
@@ -896,23 +680,26 @@ function renderMovieQuestion () {
         getH2.innerHTML = movies[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(movies[roundCounter - 1].choices[i].isCorrect == true) {
-                newScore = Math.trunc(score += 1/roundCounter)
+                score += 1/roundCounter
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+                console.log(score)
+                console.log("roundCounter")
+                console.log(1/roundCounter)
             } else {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        },{once : true})
     }
     roundCounter++
 }
 }
 
 function renderTVQuestion () {
-    if (roundCounter == 8) {
+    if (roundCounter == 6) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
@@ -921,23 +708,22 @@ function renderTVQuestion () {
         getH2.innerHTML = tv[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(tv[roundCounter - 1].choices[i].isCorrect == true) {
-                newScore = Math.trunc(score += 1/roundCounter)
+                score += 1/roundCounter
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             } else {
                 getH2.innerHTML = tv[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        },{once : true})
     }
     roundCounter++
 }
 }
-
 function renderBooksQuestion () {
-    if (roundCounter == 8) {
+    if (roundCounter == 6) {
         document.querySelector(".button-container-top").style.visibility = "hidden";
     } else {
     for (let i = 0; i < 6; i++) {
@@ -946,16 +732,16 @@ function renderBooksQuestion () {
         getH2.innerHTML = books[roundCounter].question;
         gridItems[i].addEventListener('click', function() {
             if(books[roundCounter - 1].choices[i].isCorrect == true) {
-                newScore = Math.trunc(score += 1/roundCounter)
+                score += 1/roundCounter
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             } else {
                 getH2.innerHTML = books[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
-                document.querySelector(".score").innerHTML = "Score:" + " " + newScore
+                document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
             }
-        })
+        },{once : true})
     }
     roundCounter++
 }
@@ -999,3 +785,234 @@ document.querySelector(".books").addEventListener('click', function() {
         document.querySelector(".tv").remove();
         document.querySelector(".books").remove()
 })
+
+
+///////BONUS QUESTIONS///////
+
+// MOVIES
+/*{
+        question: "Who has won the most Oscars in history?",
+        choices: [
+            {
+                text: "Katherine Hepburn",
+                image: "images/katherineHepburn.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Pauly Shore",
+                image: "images/paulyShore.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Marlon Brando",
+                image: "images/marloBrando.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Meryl Streep",
+                image: "images/merylStreep.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Daniel Day-Lewis",
+                image: "images/danielDayLewis.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Carrot Top",
+                image: "images/carrotTop.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Answer: Katherine Hepburn"
+    },
+    {
+        question: "Bruce Willis played a time travelling criminal in what movie?",
+        choices: [
+            {
+                text: "Hudson Hawk",
+                image: "images/HudsonHawk.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Die Hard With A Vengence",
+                image: "images/dieHard3.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Twelve Monkeys",
+                image: "images/12Monkeys.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "THe Fifth Element",
+                image: "images/fifthElement.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Red",
+                image: "images/red.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "The Whole Nine Yards",
+                image: "images/wholeNine.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Answer: Twelve Monkeys"
+    },
+    */
+
+// TV
+/*{
+        question: "Where was the American crime drama `Narcos` filmed?",
+        choices: [
+            {
+                text: "Nicaragua",
+                image: "images/nicaragua.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Venezuela",
+                image: "images/venezuela.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Bolivia",
+                image: "images/bolivia.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Bolize",
+                image: "images/bolize.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Columbia",
+                image: "images/columbia.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "The Moon",
+                image: "images/moon.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Answer: Columbia"
+    },
+    /*
+    {
+        question: "What Brooklyn Nine-Nine character went to school with main character, Peralta?",
+        choices: [
+            {
+                text: "Terry Jeffords",
+                image: "images/terryJeffords.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Amy Santiago",
+                image: "images/amySantiago.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Rosa Diaz",
+                image: "images/rosaDiaz.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Charles Boyle",
+                image: "images/charlesBoyle.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Gina Linetti",
+                image: "images/ginaLinetti.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Ray Holt",
+                image: "images/rayHolt.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Gina Linetti"
+    },
+    */
+
+// BOOKS
+/*{
+        question: "What was the working title of the 1936 novel Gone With the Wind?",
+        choices: [
+            {
+                text: "The Plantation",
+                image: "images/goneWithTheWind1.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Ba! Ba! Black Sheep",
+                image: "images/goneWithTheWind2.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "The Rhett Butler Affair",
+                image: "images/goneWithTheWind3.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "The Art of the Deal",
+                image: "images/goneWithTheWind4.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "It",
+                image: "images/goneWithTheWind5.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Tara",
+                image: "images/goneWithTheWind6.jpeg",
+                isCorrect: false
+            }
+        ]
+        ,
+        correctAnswer: "Ba! Ba! Black Sheep"
+    },
+    /*{
+        question: "What literary character has been portrayed by the most actors?",
+        choices: [
+            {
+                text: "Jack Ryan",
+                image: "images/jackRyan.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Dracula",
+                image: "images/dracula.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Sherlock Holmes",
+                image: "images/sherlock.jpeg",
+                isCorrect: true
+            },
+            {
+                text: "Dr. Frakenstein",
+                image: "images/frankenstein.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "James Bond",
+                image: "images/007.jpeg",
+                isCorrect: false
+            },
+            {
+                text: "Hannibal Lecter",
+                image: "images/hannibal.jpeg",
+                isCorrect: false
+            }
+        ],
+        correctAnswer: "Sherlock Holmes"
+    },
+    */
+    
