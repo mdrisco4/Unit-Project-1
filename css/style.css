@@ -13,6 +13,7 @@ h1 {
   animation: spin 3.5s linear infinite 1s;
   text-shadow: 6px 6px rgb(255, 0, 0);
 }
+
 h2 {
   text-align: center;
   height: 120px;
@@ -50,6 +51,7 @@ h3 {
   align-items: center;
   font-family: "Permanent Marker", cursive;
 }
+
 .score-container {
   display: flex;
   flex-direction: row;
@@ -59,6 +61,7 @@ h3 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 h4 {
   height: 36px;
   width: 35%;
@@ -165,19 +168,19 @@ h6 {
 }
 
 .card-title {
-  width: 28%;
+  width: 80%;
 }
 
 @media screen and (min-width: 800px) {
   .card-title {
-    width: 15%;
+    width: 80%;
   }
 }
 
 .grid-item {
   border: 1px solid black;
   margin: 25px;
-  width: 28%;
+  width: 80%;
   border-radius: 24px;
   font-size: 21px;
   background-color: yellow;
@@ -189,13 +192,13 @@ h6 {
 
 @media screen and (min-width: 800px) {
   .grid-item {
-    width: 15%;
+    width: 80%;
   }
 }
 
 .grid-item img {
   height: 210px;
-  width: 150px;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -204,18 +207,21 @@ h6 {
   animation-name: slidein;
   animation-duration: 0.5s;
 }
+
 .grid-item:hover {
   color: darkorange;
   background-color: darkturquoise;
   border: 6px solid darkviolet;
   transform: scale(1.25);
 }
+
 .button-container-bottom {
   text-align: center;
   padding: 30px;
   margin: 0;
   padding: 0;
 }
+
 .movies,
 .tv,
 .books {
@@ -227,6 +233,7 @@ h6 {
   margin-right: 30px;
   margin-left: 30px;
 }
+
 button {
   height: 60px;
   width: 120px;
@@ -239,15 +246,18 @@ button {
   color: yellow;
   transition: all 0.8s;
 }
+
 .restart {
   width: 160px;
 }
+
 button:hover {
   color: chartreuse;
   background-color: coral;
   border: 6px solid yellow;
   transform: scale(1.5);
 }
+
 @keyframes spin {
   from {
     transform: rotateY(0deg);
@@ -259,6 +269,7 @@ button:hover {
     transform: rotateX(0deg);
   }
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
