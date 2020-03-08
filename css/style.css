@@ -175,8 +175,8 @@ h6 {
 }
 
 .grid-item img {
-  height: auto;
-  width: 100%;
+  height: 270px;
+  width: 180px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -184,6 +184,13 @@ h6 {
   border-radius: 12px;
   animation-name: slidein;
   animation-duration: 0.5s;
+}
+
+@media screen and (min-width: 650px) {
+  .grid-item img {
+    height: 270px;
+    width: 80%;
+  }
 }
 
 .grid-item:hover {
