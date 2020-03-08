@@ -1,173 +1,271 @@
 body {
-    background-image: url("../images/backgroundImage.jpeg")
+  background-image: url("../images/backgroundImage.jpeg");
 }
 
 h1 {
-    text-align: center;
-    font-size: 100px;
-    color: lime;
-    font-family: 'Shrikhand', cursive;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    animation: spin 3.5s linear infinite 1s;
-    text-shadow: 6px 6px rgb(255, 0, 0);
+  text-align: center;
+  font-size: 100px;
+  color: lime;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  animation: spin 3.5s linear infinite 1s;
+  text-shadow: 6px 6px rgb(255, 0, 0);
 }
 h2 {
-    text-align: center;
-    height: 120px;
-    width: 90%;
-    font-size: 42px;
-    margin: 0 auto;
-    background-color: rgb(45, 233, 189);
-    color: magenta;
-    border: 6px solid red;
-    border-radius: 86px;
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Audiowide', cursive;
-    text-shadow: 4px 4px black;
-    animation-name: slidein;
-    animation-duration: .5s;
+  text-align: center;
+  height: 120px;
+  width: 90%;
+  font-size: 42px;
+  margin: 0 auto;
+  background-color: rgb(45, 233, 189);
+  color: magenta;
+  border: 6px solid red;
+  border-radius: 86px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Audiowide", cursive;
+  text-shadow: 4px 4px black;
+  animation-name: slidein;
+  animation-duration: 0.5s;
 }
+
+.question-text {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h3 {
-    text-align: center;
-    padding: 0;
-    margin: 9px;
-    height: 72px;
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  padding: 0;
+  margin: 9px;
+  height: 72px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Permanent Marker", cursive;
 }
 .score-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 h4 {
-    height: 36px;
-    width: 35%;
-    font-size: 42px;
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(45, 233, 189);
-    color: magenta;
-    border: 6px solid red;
-    border-radius: 36px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Audiowide', cursive;
-    text-shadow: 4px 4px black;
-    animation-name: slidein;
-    animation-duration: .5s;
+  height: 36px;
+  width: 35%;
+  font-size: 42px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45, 233, 189);
+  color: magenta;
+  border: 6px solid red;
+  border-radius: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Audiowide", cursive;
+  text-shadow: 4px 4px black;
+  animation-name: slidein;
+  animation-duration: 0.5s;
 }
+
 h6 {
-    font-size: medium;
+  font-size: medium;
 }
+
 .button-container-top {
-    text-align: center;
-    padding: 30px;
-    visibility: visible;
+  text-align: center;
+  padding: 30px;
+  visibility: visible;
 }
+
 .grid-container {
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+@media screen and (min-width: 800px) {
+  .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 390px;
+    grid-template-rows: 1fr;
+  }
 }
+
+.card1 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card1 {
+    width: 15%;
+  }
+}
+
+.card2 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card2 {
+    width: 15%;
+  }
+}
+
+.card3 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card3 {
+    width: 15%;
+  }
+}
+
+.card4 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card4 {
+    width: 15%;
+  }
+}
+
+.card5 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card5 {
+    width: 15%;
+  }
+}
+
+.card6 {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card6 {
+    width: 15%;
+  }
+}
+
+.card-title {
+  width: 28%;
+}
+
+@media screen and (min-width: 800px) {
+  .card-title {
+    width: 15%;
+  }
+}
+
 .grid-item {
-    border: 1px solid black;
-    margin: 25px;
-    border-radius: 24px;
-    font-size: 21px;
-    background-color: yellow;
-    color: darkblue;
-    transition: all .6s;
-    animation-name: slidein;
-    animation-duration: .5s;
+  border: 1px solid black;
+  margin: 25px;
+  width: 28%;
+  border-radius: 24px;
+  font-size: 21px;
+  background-color: yellow;
+  color: darkblue;
+  transition: all 0.6s;
+  animation-name: slidein;
+  animation-duration: 0.5s;
 }
+
+@media screen and (min-width: 800px) {
+  .grid-item {
+    width: 15%;
+  }
+}
+
 .grid-item img {
-    height: 210px;
-    width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    border-radius: 12px;
-    animation-name: slidein;
-    animation-duration: .5s;
+  height: 210px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  border-radius: 12px;
+  animation-name: slidein;
+  animation-duration: 0.5s;
 }
 .grid-item:hover {
-    color: darkorange;
-    background-color: darkturquoise;
-    border: 6px solid darkviolet;
-    transform: scale(1.25);
+  color: darkorange;
+  background-color: darkturquoise;
+  border: 6px solid darkviolet;
+  transform: scale(1.25);
 }
 .button-container-bottom {
-    text-align: center;
-    padding: 30px;
-    margin: 0;
-    padding: 0;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  padding: 0;
 }
-.movies, .tv, .books{
-    height: 60px;
-    width: 144px;
-    border-radius: 12px;
-    font-size: 24px;
-    padding: 0;
-    margin-right: 30px;
-    margin-left: 30px;
+.movies,
+.tv,
+.books {
+  height: 60px;
+  width: 144px;
+  border-radius: 12px;
+  font-size: 24px;
+  padding: 0;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 button {
-    height: 60px;
-    width: 120px;
-    border-radius: 12px;
-    font-family: 'Audiowide', cursive;
-    font-size: 24px;
-    padding: 0;
-    border: 6px solid yellow;
-    background-color: mediumblue;
-    color: yellow;
-    transition: all .8s;
+  height: 60px;
+  width: 120px;
+  border-radius: 12px;
+  font-family: "Audiowide", cursive;
+  font-size: 24px;
+  padding: 0;
+  border: 6px solid yellow;
+  background-color: mediumblue;
+  color: yellow;
+  transition: all 0.8s;
 }
 .restart {
-    width: 160px;
+  width: 160px;
 }
 button:hover {
-    color: chartreuse;
-    background-color: coral;
-    border: 6px solid yellow;
-    transform: scale(1.5);
+  color: chartreuse;
+  background-color: coral;
+  border: 6px solid yellow;
+  transform: scale(1.5);
 }
 @keyframes spin {
-    from {
-      transform:rotateY(0deg);
+  from {
+    transform: rotateY(0deg);
   }
-    to {
-      transform:rotateX(360deg);
+  to {
+    transform: rotateX(360deg);
   }
-    from {
-      transform: rotateX(0deg);
+  from {
+    transform: rotateX(0deg);
   }
 }
 @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%; 
-    }
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
