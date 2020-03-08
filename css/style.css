@@ -215,6 +215,17 @@ h6 {
   padding: 0;
 }
 
+.icons {
+    font-size: 15px;
+    margin: 10px;
+}
+
+@media screen and (min-width: 650px) {
+    .icons {
+        font-size: 24px;  
+    }
+  }
+
 .movies,
 .tv,
 .books {
