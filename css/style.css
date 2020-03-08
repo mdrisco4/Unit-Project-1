@@ -14,7 +14,7 @@ h1 {
   text-shadow: 6px 6px rgb(255, 0, 0);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
   h1 {
     font-size: 100px;
   }
@@ -30,21 +30,24 @@ h2 {
   color: magenta;
   border: 6px solid red;
   border-radius: 86px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-flow: nowrap;
   justify-content: center;
   align-items: center;
   font-family: "Audiowide", cursive;
-  text-shadow: 4px 4px black;
+  text-shadow: 2px 2px black;
   animation-name: slidein;
   animation-duration: 0.5s;
 }
 
-@media screen and (min-width: 800px) {
-    h2 {
-        font-size: 42px;
-    }
+@media screen and (min-width: 650px) {
+  h2 {
+    font-size: 42px;
+    text-shadow: 4px 4px black;
   }
+}
 
 .question-text {
   height: auto;
@@ -76,7 +79,7 @@ h3 {
 
 h4 {
   height: auto;
-  width: 35%;
+  width: 45%;
   font-size: 24px;
   display: flex;
   flex-flow: nowrap;
@@ -91,15 +94,17 @@ h4 {
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Audiowide", cursive;
-  text-shadow: 4px 4px black;
+  text-shadow: 2px 2px black;
   animation-name: slidein;
   animation-duration: 0.5s;
 }
 
-@media screen and (min-width: 800px) {
-    h4 {
-        font-size: 42px;
- }
+@media screen and (min-width: 650px) {
+  h4 {
+    font-size: 42px;
+    width: 35%;
+    text-shadow: 4px 4px black;
+  }
 }
 
 h6 {
@@ -107,9 +112,18 @@ h6 {
 }
 
 .button-container-top {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px;
   visibility: visible;
+}
+
+@media screen and (min-width: 650px) {
+  .button-container-top {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .grid-container {
@@ -118,78 +132,21 @@ h6 {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-
-/* .card1 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card1 {
-    width: 15%;
-  }
-}
-
-.card2 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card2 {
-    width: 15%;
-  }
-}
-
-.card3 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card3 {
-    width: 15%;
-  }
-}
-
-.card4 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card4 {
-    width: 15%;
-  }
-}
-
-.card5 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card5 {
-    width: 15%;
-  }
-}
-
-.card6 {
-  width: 28%;
-}
-
-@media screen and (min-width: 800px) {
-  .card6 {
-    width: 15%;
-  }
-} */
 
 .card-title {
   width: 80%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
   .card-title {
     width: 80%;
   }
@@ -197,7 +154,9 @@ h6 {
 
 .grid-item {
   border: 1px solid black;
-  margin: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   width: 80%;
   height: auto;
   border-radius: 24px;
@@ -209,7 +168,7 @@ h6 {
   animation-duration: 0.5s;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 650px) {
   .grid-item {
     width: 80%;
   }
@@ -237,7 +196,7 @@ h6 {
 .button-container-bottom {
   text-align: center;
   padding: 30px;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
 }
 
