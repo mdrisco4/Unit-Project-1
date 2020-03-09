@@ -876,11 +876,13 @@ function renderMovieQuestion () {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
+                console.log(roundCounter)
                 console.log(score)
             } else {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
+                console.log(roundCounter)
                 console.log(score)
             }
          },{once : true})
