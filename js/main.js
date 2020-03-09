@@ -255,7 +255,7 @@ const movies = [
 ]
 const tv = [
     {
-        question: "Every episode of Seinfeld contains an image or reference to what superhero?",
+        question: "Nearly every episode of Seinfeld contains an image or reference to what superhero?",
         choices: [
             {
                 text: "Batman",
@@ -792,10 +792,12 @@ function bonusMovieQuestion () {
                 getH2.innerHTML = movies[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+                console.log(score)
             } else {
                 getH2.innerHTML = movies[5].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "Score:" + " " + Math.ceil(score)
+                console.log(score)
             }
         }
         },{once : true})
@@ -874,10 +876,12 @@ function renderMovieQuestion () {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128512 Correct! &#128512"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
+                console.log(score)
             } else {
                 getH2.innerHTML = movies[roundCounter - 1].correctAnswer;
                 document.querySelector(".right-wrong").innerHTML = "&#128577 No Luck &#128577"
                 document.querySelector(".score").innerHTML = "&#11088 Score:" + " " + Math.ceil(score) + " " + " &#11088"
+                console.log(score)
             }
          },{once : true})
     }

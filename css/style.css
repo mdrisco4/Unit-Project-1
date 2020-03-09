@@ -29,7 +29,7 @@ h2 {
   background-color: rgb(45, 233, 189);
   color: magenta;
   border: 6px solid red;
-  border-radius: 86px;
+  border-radius: 36px;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -96,7 +96,7 @@ h4 {
   background-color: rgb(45, 233, 189);
   color: magenta;
   border: 6px solid red;
-  border-radius: 36px;
+  border-radius: 28px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
